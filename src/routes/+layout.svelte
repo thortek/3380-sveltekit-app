@@ -27,7 +27,7 @@
     <li><a href="/">🏠</a></li>
     <li><a href="/basics">Basics</a></li>
     <li><a href="/es6">ES6</a></li>
-    <li><a href="/blog">Blog</a></li>
+    <li><a href="/loops">Loops</a></li>
   </ul>
 </div>
 
