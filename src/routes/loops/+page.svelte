@@ -9,6 +9,9 @@
 
 	function filterTheArray() {
 		let userArray = JSON.parse(inputArray)
+    if(typeof element === 'string') {
+      element = parseInt(element)
+    }
     let tempArr = []
 		// Removes any nested array that contains the element
 		for (let i = 0; i < userArray.length; i++) {
