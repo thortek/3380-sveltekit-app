@@ -29,7 +29,7 @@ async function fetchAllPokemonData(pokemonArray: { name: string, url: string }[]
             const data = await response.json();
             
             //console.log(data);
-            await fetchPokemonMoves(data.moves[0].move.url);
+            const firstFiveMovesData = await fetchPokemonMoves(pokemon, data.moves);
 
             const reducedPokemon = {
                 name: pokemon.name,
@@ -38,6 +38,8 @@ async function fetchAllPokemonData(pokemonArray: { name: string, url: string }[]
                 height: data.height,
                 weight: data.weight,
                 types: data.types.map((type: { type: { name: string } }) => type.type.name),
+                moves: firstFiveMovesData,
+                image: data.sprites.other["official-artwork"].front_default,
             }
             return reducedPokemon;
         })
@@ -46,17 +48,25 @@ async function fetchAllPokemonData(pokemonArray: { name: string, url: string }[]
     return pokemonData
 }
 
-async function fetchPokemonMoves(moveUrl: any) {
-    console.log(moveUrl);
-/*     const testObject = {
-        name: move.name,
-        accuracy: move.accuracy,
-        power: move.power,
-    }
-    console.log(testObject); */
-     const response = await fetch(moveUrl);
-    const data = await response.json();
-    console.log(data.name);
+async function fetchPokemonMoves(pokemon: any, moves: any) {
+    console.log(`Fetching ${moves.length} moves for ${pokemon.name}`);
+    
+    const firstFiveMoves = moves.slice(0, 5)
+    const moveData = await Promise.all(
+        firstFiveMoves.map(async (move: { move: { name: string, url: string } }) => {
+            const response = await fetch(move.move.url);
+            const data = await response.json();
+            const reducedMove = {
+                name: move.move.name,
+                accuracy: data.accuracy,
+                power: data.power,
+            }
+            return reducedMove;
+        })
+    );
+    const filteredMoveData = moveData.filter((move: { name: string, accuracy: number, power: number }) => move.accuracy && move.power);
+    
+    return filteredMoveData
 }
 
 

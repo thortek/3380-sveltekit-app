@@ -7,7 +7,30 @@
     "weight": 250,
     "types": [
       "fire"
-    ]
+    ],
+    "moves": [
+      {
+        "name": "pay-day",
+        "accuracy": 100,
+        "power": 40
+      },
+      {
+        "name": "scratch",
+        "accuracy": 100,
+        "power": 40
+      },
+      {
+        "name": "double-kick",
+        "accuracy": 100,
+        "power": 30
+      },
+      {
+        "name": "body-slam",
+        "accuracy": 100,
+        "power": 85
+      }
+    ],
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/726.png"
   },
   {
     "name": "incineroar",
@@ -18,7 +41,35 @@
     "types": [
       "fire",
       "dark"
-    ]
+    ],
+    "moves": [
+      {
+        "name": "mega-punch",
+        "accuracy": 85,
+        "power": 80
+      },
+      {
+        "name": "pay-day",
+        "accuracy": 100,
+        "power": 40
+      },
+      {
+        "name": "fire-punch",
+        "accuracy": 100,
+        "power": 75
+      },
+      {
+        "name": "thunder-punch",
+        "accuracy": 100,
+        "power": 75
+      },
+      {
+        "name": "scratch",
+        "accuracy": 100,
+        "power": 40
+      }
+    ],
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/727.png"
   },
   {
     "name": "popplio",
@@ -28,7 +79,25 @@
     "weight": 75,
     "types": [
       "water"
-    ]
+    ],
+    "moves": [
+      {
+        "name": "pound",
+        "accuracy": 100,
+        "power": 40
+      },
+      {
+        "name": "double-slap",
+        "accuracy": 85,
+        "power": 15
+      },
+      {
+        "name": "water-gun",
+        "accuracy": 100,
+        "power": 40
+      }
+    ],
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/728.png"
   },
   {
     "name": "brionne",
@@ -38,7 +107,25 @@
     "weight": 175,
     "types": [
       "water"
-    ]
+    ],
+    "moves": [
+      {
+        "name": "pound",
+        "accuracy": 100,
+        "power": 40
+      },
+      {
+        "name": "double-slap",
+        "accuracy": 85,
+        "power": 15
+      },
+      {
+        "name": "body-slam",
+        "accuracy": 100,
+        "power": 85
+      }
+    ],
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/729.png"
   },
   {
     "name": "primarina",
@@ -49,7 +136,25 @@
     "types": [
       "water",
       "fairy"
-    ]
+    ],
+    "moves": [
+      {
+        "name": "pound",
+        "accuracy": 100,
+        "power": 40
+      },
+      {
+        "name": "double-slap",
+        "accuracy": 85,
+        "power": 15
+      },
+      {
+        "name": "body-slam",
+        "accuracy": 100,
+        "power": 85
+      }
+    ],
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/730.png"
   },
   {
     "name": "pikipek",
@@ -60,7 +165,25 @@
     "types": [
       "normal",
       "flying"
-    ]
+    ],
+    "moves": [
+      {
+        "name": "fly",
+        "accuracy": 95,
+        "power": 90
+      },
+      {
+        "name": "fury-attack",
+        "accuracy": 85,
+        "power": 15
+      },
+      {
+        "name": "take-down",
+        "accuracy": 85,
+        "power": 90
+      }
+    ],
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/731.png"
   },
   {
     "name": "trumbeak",
@@ -71,7 +194,25 @@
     "types": [
       "normal",
       "flying"
-    ]
+    ],
+    "moves": [
+      {
+        "name": "fly",
+        "accuracy": 95,
+        "power": 90
+      },
+      {
+        "name": "fury-attack",
+        "accuracy": 85,
+        "power": 15
+      },
+      {
+        "name": "take-down",
+        "accuracy": 85,
+        "power": 90
+      }
+    ],
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/732.png"
   },
   {
     "name": "toucannon",
@@ -82,7 +223,25 @@
     "types": [
       "normal",
       "flying"
-    ]
+    ],
+    "moves": [
+      {
+        "name": "fly",
+        "accuracy": 95,
+        "power": 90
+      },
+      {
+        "name": "fury-attack",
+        "accuracy": 85,
+        "power": 15
+      },
+      {
+        "name": "take-down",
+        "accuracy": 85,
+        "power": 90
+      }
+    ],
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/733.png"
   },
   {
     "name": "yungoos",
@@ -92,7 +251,30 @@
     "weight": 60,
     "types": [
       "normal"
-    ]
+    ],
+    "moves": [
+      {
+        "name": "tackle",
+        "accuracy": 100,
+        "power": 40
+      },
+      {
+        "name": "take-down",
+        "accuracy": 85,
+        "power": 90
+      },
+      {
+        "name": "thrash",
+        "accuracy": 100,
+        "power": 120
+      },
+      {
+        "name": "double-edge",
+        "accuracy": 100,
+        "power": 120
+      }
+    ],
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/734.png"
   },
   {
     "name": "gumshoos",
@@ -102,7 +284,30 @@
     "weight": 142,
     "types": [
       "normal"
-    ]
+    ],
+    "moves": [
+      {
+        "name": "fire-punch",
+        "accuracy": 100,
+        "power": 75
+      },
+      {
+        "name": "ice-punch",
+        "accuracy": 100,
+        "power": 75
+      },
+      {
+        "name": "thunder-punch",
+        "accuracy": 100,
+        "power": 75
+      },
+      {
+        "name": "tackle",
+        "accuracy": 100,
+        "power": 40
+      }
+    ],
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/735.png"
   },
   {
     "name": "grubbin",
@@ -112,7 +317,30 @@
     "weight": 44,
     "types": [
       "bug"
-    ]
+    ],
+    "moves": [
+      {
+        "name": "vice-grip",
+        "accuracy": 100,
+        "power": 55
+      },
+      {
+        "name": "take-down",
+        "accuracy": 85,
+        "power": 90
+      },
+      {
+        "name": "bite",
+        "accuracy": 100,
+        "power": 60
+      },
+      {
+        "name": "thunderbolt",
+        "accuracy": 100,
+        "power": 90
+      }
+    ],
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/736.png"
   },
   {
     "name": "charjabug",
@@ -123,7 +351,30 @@
     "types": [
       "bug",
       "electric"
-    ]
+    ],
+    "moves": [
+      {
+        "name": "vice-grip",
+        "accuracy": 100,
+        "power": 55
+      },
+      {
+        "name": "take-down",
+        "accuracy": 85,
+        "power": 90
+      },
+      {
+        "name": "bite",
+        "accuracy": 100,
+        "power": 60
+      },
+      {
+        "name": "thunderbolt",
+        "accuracy": 100,
+        "power": 90
+      }
+    ],
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/737.png"
   },
   {
     "name": "vikavolt",
@@ -134,7 +385,30 @@
     "types": [
       "bug",
       "electric"
-    ]
+    ],
+    "moves": [
+      {
+        "name": "vice-grip",
+        "accuracy": 100,
+        "power": 55
+      },
+      {
+        "name": "fly",
+        "accuracy": 95,
+        "power": 90
+      },
+      {
+        "name": "take-down",
+        "accuracy": 85,
+        "power": 90
+      },
+      {
+        "name": "bite",
+        "accuracy": 100,
+        "power": 60
+      }
+    ],
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/738.png"
   },
   {
     "name": "crabrawler",
@@ -144,7 +418,35 @@
     "weight": 70,
     "types": [
       "fighting"
-    ]
+    ],
+    "moves": [
+      {
+        "name": "ice-punch",
+        "accuracy": 100,
+        "power": 75
+      },
+      {
+        "name": "thunder-punch",
+        "accuracy": 100,
+        "power": 75
+      },
+      {
+        "name": "slam",
+        "accuracy": 75,
+        "power": 80
+      },
+      {
+        "name": "body-slam",
+        "accuracy": 100,
+        "power": 85
+      },
+      {
+        "name": "take-down",
+        "accuracy": 85,
+        "power": 90
+      }
+    ],
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/739.png"
   },
   {
     "name": "crabominable",
@@ -155,7 +457,35 @@
     "types": [
       "fighting",
       "ice"
-    ]
+    ],
+    "moves": [
+      {
+        "name": "ice-punch",
+        "accuracy": 100,
+        "power": 75
+      },
+      {
+        "name": "thunder-punch",
+        "accuracy": 100,
+        "power": 75
+      },
+      {
+        "name": "slam",
+        "accuracy": 75,
+        "power": 80
+      },
+      {
+        "name": "body-slam",
+        "accuracy": 100,
+        "power": 85
+      },
+      {
+        "name": "take-down",
+        "accuracy": 85,
+        "power": 90
+      }
+    ],
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/740.png"
   },
   {
     "name": "oricorio-baile",
@@ -166,7 +496,30 @@
     "types": [
       "fire",
       "flying"
-    ]
+    ],
+    "moves": [
+      {
+        "name": "pound",
+        "accuracy": 100,
+        "power": 40
+      },
+      {
+        "name": "double-slap",
+        "accuracy": 85,
+        "power": 15
+      },
+      {
+        "name": "fly",
+        "accuracy": 95,
+        "power": 90
+      },
+      {
+        "name": "take-down",
+        "accuracy": 85,
+        "power": 90
+      }
+    ],
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/741.png"
   },
   {
     "name": "cutiefly",
@@ -177,7 +530,20 @@
     "types": [
       "bug",
       "fairy"
-    ]
+    ],
+    "moves": [
+      {
+        "name": "absorb",
+        "accuracy": 100,
+        "power": 20
+      },
+      {
+        "name": "psychic",
+        "accuracy": 100,
+        "power": 90
+      }
+    ],
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/742.png"
   },
   {
     "name": "ribombee",
@@ -188,7 +554,30 @@
     "types": [
       "bug",
       "fairy"
-    ]
+    ],
+    "moves": [
+      {
+        "name": "take-down",
+        "accuracy": 85,
+        "power": 90
+      },
+      {
+        "name": "hyper-beam",
+        "accuracy": 90,
+        "power": 150
+      },
+      {
+        "name": "absorb",
+        "accuracy": 100,
+        "power": 20
+      },
+      {
+        "name": "solar-beam",
+        "accuracy": 100,
+        "power": 120
+      }
+    ],
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/743.png"
   },
   {
     "name": "rockruff",
@@ -198,7 +587,25 @@
     "weight": 92,
     "types": [
       "rock"
-    ]
+    ],
+    "moves": [
+      {
+        "name": "tackle",
+        "accuracy": 100,
+        "power": 40
+      },
+      {
+        "name": "body-slam",
+        "accuracy": 100,
+        "power": 85
+      },
+      {
+        "name": "take-down",
+        "accuracy": 85,
+        "power": 90
+      }
+    ],
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/744.png"
   },
   {
     "name": "lycanroc-midday",
@@ -208,7 +615,25 @@
     "weight": 250,
     "types": [
       "rock"
-    ]
+    ],
+    "moves": [
+      {
+        "name": "tackle",
+        "accuracy": 100,
+        "power": 40
+      },
+      {
+        "name": "body-slam",
+        "accuracy": 100,
+        "power": 85
+      },
+      {
+        "name": "take-down",
+        "accuracy": 85,
+        "power": 90
+      }
+    ],
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/745.png"
   },
   {
     "name": "wishiwashi-solo",
@@ -218,7 +643,25 @@
     "weight": 3,
     "types": [
       "water"
-    ]
+    ],
+    "moves": [
+      {
+        "name": "take-down",
+        "accuracy": 85,
+        "power": 90
+      },
+      {
+        "name": "double-edge",
+        "accuracy": 100,
+        "power": 120
+      },
+      {
+        "name": "water-gun",
+        "accuracy": 100,
+        "power": 40
+      }
+    ],
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/746.png"
   },
   {
     "name": "mareanie",
@@ -229,7 +672,35 @@
     "types": [
       "poison",
       "water"
-    ]
+    ],
+    "moves": [
+      {
+        "name": "poison-sting",
+        "accuracy": 100,
+        "power": 15
+      },
+      {
+        "name": "pin-missile",
+        "accuracy": 95,
+        "power": 25
+      },
+      {
+        "name": "bite",
+        "accuracy": 100,
+        "power": 60
+      },
+      {
+        "name": "hydro-pump",
+        "accuracy": 80,
+        "power": 110
+      },
+      {
+        "name": "surf",
+        "accuracy": 100,
+        "power": 90
+      }
+    ],
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/747.png"
   },
   {
     "name": "toxapex",
@@ -240,7 +711,35 @@
     "types": [
       "poison",
       "water"
-    ]
+    ],
+    "moves": [
+      {
+        "name": "body-slam",
+        "accuracy": 100,
+        "power": 85
+      },
+      {
+        "name": "poison-sting",
+        "accuracy": 100,
+        "power": 15
+      },
+      {
+        "name": "pin-missile",
+        "accuracy": 95,
+        "power": 25
+      },
+      {
+        "name": "bite",
+        "accuracy": 100,
+        "power": 60
+      },
+      {
+        "name": "hydro-pump",
+        "accuracy": 80,
+        "power": 110
+      }
+    ],
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/748.png"
   },
   {
     "name": "mudbray",
@@ -250,7 +749,35 @@
     "weight": 1100,
     "types": [
       "ground"
-    ]
+    ],
+    "moves": [
+      {
+        "name": "stomp",
+        "accuracy": 100,
+        "power": 65
+      },
+      {
+        "name": "double-kick",
+        "accuracy": 100,
+        "power": 30
+      },
+      {
+        "name": "mega-kick",
+        "accuracy": 75,
+        "power": 120
+      },
+      {
+        "name": "body-slam",
+        "accuracy": 100,
+        "power": 85
+      },
+      {
+        "name": "take-down",
+        "accuracy": 85,
+        "power": 90
+      }
+    ],
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/749.png"
   },
   {
     "name": "mudsdale",
@@ -260,6 +787,34 @@
     "weight": 9200,
     "types": [
       "ground"
-    ]
+    ],
+    "moves": [
+      {
+        "name": "stomp",
+        "accuracy": 100,
+        "power": 65
+      },
+      {
+        "name": "double-kick",
+        "accuracy": 100,
+        "power": 30
+      },
+      {
+        "name": "mega-kick",
+        "accuracy": 75,
+        "power": 120
+      },
+      {
+        "name": "body-slam",
+        "accuracy": 100,
+        "power": 85
+      },
+      {
+        "name": "take-down",
+        "accuracy": 85,
+        "power": 90
+      }
+    ],
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/750.png"
   }
 ]
