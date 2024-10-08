@@ -7,6 +7,33 @@
     "weight": 250,
     "types": [
       "fire"
+    ],
+    "moves": [
+      {
+        "name": "pay-day",
+        "accuracy": 100,
+        "power": 40
+      },
+      {
+        "name": "scratch",
+        "accuracy": 100,
+        "power": 40
+      },
+      {
+        "name": "swords-dance",
+        "accuracy": null,
+        "power": null
+      },
+      {
+        "name": "double-kick",
+        "accuracy": 100,
+        "power": 30
+      },
+      {
+        "name": "body-slam",
+        "accuracy": 100,
+        "power": 85
+      }
     ]
   },
   {
@@ -18,6 +45,33 @@
     "types": [
       "fire",
       "dark"
+    ],
+    "moves": [
+      {
+        "name": "mega-punch",
+        "accuracy": 85,
+        "power": 80
+      },
+      {
+        "name": "pay-day",
+        "accuracy": 100,
+        "power": 40
+      },
+      {
+        "name": "fire-punch",
+        "accuracy": 100,
+        "power": 75
+      },
+      {
+        "name": "thunder-punch",
+        "accuracy": 100,
+        "power": 75
+      },
+      {
+        "name": "scratch",
+        "accuracy": 100,
+        "power": 40
+      }
     ]
   },
   {
@@ -28,6 +82,33 @@
     "weight": 75,
     "types": [
       "water"
+    ],
+    "moves": [
+      {
+        "name": "pound",
+        "accuracy": 100,
+        "power": 40
+      },
+      {
+        "name": "double-slap",
+        "accuracy": 85,
+        "power": 15
+      },
+      {
+        "name": "growl",
+        "accuracy": 100,
+        "power": null
+      },
+      {
+        "name": "sing",
+        "accuracy": 55,
+        "power": null
+      },
+      {
+        "name": "water-gun",
+        "accuracy": 100,
+        "power": 40
+      }
     ]
   },
   {
@@ -38,6 +119,33 @@
     "weight": 175,
     "types": [
       "water"
+    ],
+    "moves": [
+      {
+        "name": "pound",
+        "accuracy": 100,
+        "power": 40
+      },
+      {
+        "name": "double-slap",
+        "accuracy": 85,
+        "power": 15
+      },
+      {
+        "name": "body-slam",
+        "accuracy": 100,
+        "power": 85
+      },
+      {
+        "name": "growl",
+        "accuracy": 100,
+        "power": null
+      },
+      {
+        "name": "sing",
+        "accuracy": 55,
+        "power": null
+      }
     ]
   },
   {
@@ -49,6 +157,33 @@
     "types": [
       "water",
       "fairy"
+    ],
+    "moves": [
+      {
+        "name": "pound",
+        "accuracy": 100,
+        "power": 40
+      },
+      {
+        "name": "double-slap",
+        "accuracy": 85,
+        "power": 15
+      },
+      {
+        "name": "body-slam",
+        "accuracy": 100,
+        "power": 85
+      },
+      {
+        "name": "growl",
+        "accuracy": 100,
+        "power": null
+      },
+      {
+        "name": "sing",
+        "accuracy": 55,
+        "power": null
+      }
     ]
   },
   {
@@ -60,6 +195,33 @@
     "types": [
       "normal",
       "flying"
+    ],
+    "moves": [
+      {
+        "name": "swords-dance",
+        "accuracy": null,
+        "power": null
+      },
+      {
+        "name": "fly",
+        "accuracy": 95,
+        "power": 90
+      },
+      {
+        "name": "fury-attack",
+        "accuracy": 85,
+        "power": 15
+      },
+      {
+        "name": "take-down",
+        "accuracy": 85,
+        "power": 90
+      },
+      {
+        "name": "growl",
+        "accuracy": 100,
+        "power": null
+      }
     ]
   },
   {
@@ -71,6 +233,33 @@
     "types": [
       "normal",
       "flying"
+    ],
+    "moves": [
+      {
+        "name": "swords-dance",
+        "accuracy": null,
+        "power": null
+      },
+      {
+        "name": "fly",
+        "accuracy": 95,
+        "power": 90
+      },
+      {
+        "name": "fury-attack",
+        "accuracy": 85,
+        "power": 15
+      },
+      {
+        "name": "take-down",
+        "accuracy": 85,
+        "power": 90
+      },
+      {
+        "name": "growl",
+        "accuracy": 100,
+        "power": null
+      }
     ]
   },
   {
@@ -82,6 +271,33 @@
     "types": [
       "normal",
       "flying"
+    ],
+    "moves": [
+      {
+        "name": "swords-dance",
+        "accuracy": null,
+        "power": null
+      },
+      {
+        "name": "fly",
+        "accuracy": 95,
+        "power": 90
+      },
+      {
+        "name": "fury-attack",
+        "accuracy": 85,
+        "power": 15
+      },
+      {
+        "name": "take-down",
+        "accuracy": 85,
+        "power": 90
+      },
+      {
+        "name": "growl",
+        "accuracy": 100,
+        "power": null
+      }
     ]
   },
   {
@@ -92,6 +308,33 @@
     "weight": 60,
     "types": [
       "normal"
+    ],
+    "moves": [
+      {
+        "name": "sand-attack",
+        "accuracy": 100,
+        "power": null
+      },
+      {
+        "name": "tackle",
+        "accuracy": 100,
+        "power": 40
+      },
+      {
+        "name": "take-down",
+        "accuracy": 85,
+        "power": 90
+      },
+      {
+        "name": "thrash",
+        "accuracy": 100,
+        "power": 120
+      },
+      {
+        "name": "double-edge",
+        "accuracy": 100,
+        "power": 120
+      }
     ]
   },
   {
@@ -102,6 +345,33 @@
     "weight": 142,
     "types": [
       "normal"
+    ],
+    "moves": [
+      {
+        "name": "fire-punch",
+        "accuracy": 100,
+        "power": 75
+      },
+      {
+        "name": "ice-punch",
+        "accuracy": 100,
+        "power": 75
+      },
+      {
+        "name": "thunder-punch",
+        "accuracy": 100,
+        "power": 75
+      },
+      {
+        "name": "sand-attack",
+        "accuracy": 100,
+        "power": null
+      },
+      {
+        "name": "tackle",
+        "accuracy": 100,
+        "power": 40
+      }
     ]
   },
   {
@@ -112,6 +382,33 @@
     "weight": 44,
     "types": [
       "bug"
+    ],
+    "moves": [
+      {
+        "name": "vice-grip",
+        "accuracy": 100,
+        "power": 55
+      },
+      {
+        "name": "take-down",
+        "accuracy": 85,
+        "power": 90
+      },
+      {
+        "name": "bite",
+        "accuracy": 100,
+        "power": 60
+      },
+      {
+        "name": "string-shot",
+        "accuracy": 95,
+        "power": null
+      },
+      {
+        "name": "thunderbolt",
+        "accuracy": 100,
+        "power": 90
+      }
     ]
   },
   {
@@ -123,6 +420,33 @@
     "types": [
       "bug",
       "electric"
+    ],
+    "moves": [
+      {
+        "name": "vice-grip",
+        "accuracy": 100,
+        "power": 55
+      },
+      {
+        "name": "take-down",
+        "accuracy": 85,
+        "power": 90
+      },
+      {
+        "name": "bite",
+        "accuracy": 100,
+        "power": 60
+      },
+      {
+        "name": "string-shot",
+        "accuracy": 95,
+        "power": null
+      },
+      {
+        "name": "thunderbolt",
+        "accuracy": 100,
+        "power": 90
+      }
     ]
   },
   {
@@ -134,6 +458,33 @@
     "types": [
       "bug",
       "electric"
+    ],
+    "moves": [
+      {
+        "name": "vice-grip",
+        "accuracy": 100,
+        "power": 55
+      },
+      {
+        "name": "guillotine",
+        "accuracy": 30,
+        "power": null
+      },
+      {
+        "name": "fly",
+        "accuracy": 95,
+        "power": 90
+      },
+      {
+        "name": "take-down",
+        "accuracy": 85,
+        "power": 90
+      },
+      {
+        "name": "bite",
+        "accuracy": 100,
+        "power": 60
+      }
     ]
   },
   {
@@ -144,6 +495,33 @@
     "weight": 70,
     "types": [
       "fighting"
+    ],
+    "moves": [
+      {
+        "name": "ice-punch",
+        "accuracy": 100,
+        "power": 75
+      },
+      {
+        "name": "thunder-punch",
+        "accuracy": 100,
+        "power": 75
+      },
+      {
+        "name": "slam",
+        "accuracy": 75,
+        "power": 80
+      },
+      {
+        "name": "body-slam",
+        "accuracy": 100,
+        "power": 85
+      },
+      {
+        "name": "take-down",
+        "accuracy": 85,
+        "power": 90
+      }
     ]
   },
   {
@@ -155,6 +533,33 @@
     "types": [
       "fighting",
       "ice"
+    ],
+    "moves": [
+      {
+        "name": "ice-punch",
+        "accuracy": 100,
+        "power": 75
+      },
+      {
+        "name": "thunder-punch",
+        "accuracy": 100,
+        "power": 75
+      },
+      {
+        "name": "slam",
+        "accuracy": 75,
+        "power": 80
+      },
+      {
+        "name": "body-slam",
+        "accuracy": 100,
+        "power": 85
+      },
+      {
+        "name": "take-down",
+        "accuracy": 85,
+        "power": 90
+      }
     ]
   },
   {
@@ -166,6 +571,33 @@
     "types": [
       "fire",
       "flying"
+    ],
+    "moves": [
+      {
+        "name": "pound",
+        "accuracy": 100,
+        "power": 40
+      },
+      {
+        "name": "double-slap",
+        "accuracy": 85,
+        "power": 15
+      },
+      {
+        "name": "swords-dance",
+        "accuracy": null,
+        "power": null
+      },
+      {
+        "name": "fly",
+        "accuracy": 95,
+        "power": 90
+      },
+      {
+        "name": "take-down",
+        "accuracy": 85,
+        "power": 90
+      }
     ]
   },
   {
@@ -177,6 +609,33 @@
     "types": [
       "bug",
       "fairy"
+    ],
+    "moves": [
+      {
+        "name": "absorb",
+        "accuracy": 100,
+        "power": 20
+      },
+      {
+        "name": "stun-spore",
+        "accuracy": 75,
+        "power": null
+      },
+      {
+        "name": "toxic",
+        "accuracy": 90,
+        "power": null
+      },
+      {
+        "name": "psychic",
+        "accuracy": 100,
+        "power": 90
+      },
+      {
+        "name": "double-team",
+        "accuracy": null,
+        "power": null
+      }
     ]
   },
   {
@@ -188,6 +647,33 @@
     "types": [
       "bug",
       "fairy"
+    ],
+    "moves": [
+      {
+        "name": "take-down",
+        "accuracy": 85,
+        "power": 90
+      },
+      {
+        "name": "hyper-beam",
+        "accuracy": 90,
+        "power": 150
+      },
+      {
+        "name": "absorb",
+        "accuracy": 100,
+        "power": 20
+      },
+      {
+        "name": "solar-beam",
+        "accuracy": 100,
+        "power": 120
+      },
+      {
+        "name": "stun-spore",
+        "accuracy": 75,
+        "power": null
+      }
     ]
   },
   {
@@ -198,6 +684,33 @@
     "weight": 92,
     "types": [
       "rock"
+    ],
+    "moves": [
+      {
+        "name": "swords-dance",
+        "accuracy": null,
+        "power": null
+      },
+      {
+        "name": "sand-attack",
+        "accuracy": 100,
+        "power": null
+      },
+      {
+        "name": "tackle",
+        "accuracy": 100,
+        "power": 40
+      },
+      {
+        "name": "body-slam",
+        "accuracy": 100,
+        "power": 85
+      },
+      {
+        "name": "take-down",
+        "accuracy": 85,
+        "power": 90
+      }
     ]
   },
   {
@@ -208,6 +721,33 @@
     "weight": 250,
     "types": [
       "rock"
+    ],
+    "moves": [
+      {
+        "name": "swords-dance",
+        "accuracy": null,
+        "power": null
+      },
+      {
+        "name": "sand-attack",
+        "accuracy": 100,
+        "power": null
+      },
+      {
+        "name": "tackle",
+        "accuracy": 100,
+        "power": 40
+      },
+      {
+        "name": "body-slam",
+        "accuracy": 100,
+        "power": 85
+      },
+      {
+        "name": "take-down",
+        "accuracy": 85,
+        "power": 90
+      }
     ]
   },
   {
@@ -218,6 +758,33 @@
     "weight": 3,
     "types": [
       "water"
+    ],
+    "moves": [
+      {
+        "name": "take-down",
+        "accuracy": 85,
+        "power": 90
+      },
+      {
+        "name": "double-edge",
+        "accuracy": 100,
+        "power": 120
+      },
+      {
+        "name": "growl",
+        "accuracy": 100,
+        "power": null
+      },
+      {
+        "name": "mist",
+        "accuracy": null,
+        "power": null
+      },
+      {
+        "name": "water-gun",
+        "accuracy": 100,
+        "power": 40
+      }
     ]
   },
   {
@@ -229,6 +796,33 @@
     "types": [
       "poison",
       "water"
+    ],
+    "moves": [
+      {
+        "name": "poison-sting",
+        "accuracy": 100,
+        "power": 15
+      },
+      {
+        "name": "pin-missile",
+        "accuracy": 95,
+        "power": 25
+      },
+      {
+        "name": "bite",
+        "accuracy": 100,
+        "power": 60
+      },
+      {
+        "name": "hydro-pump",
+        "accuracy": 80,
+        "power": 110
+      },
+      {
+        "name": "surf",
+        "accuracy": 100,
+        "power": 90
+      }
     ]
   },
   {
@@ -240,6 +834,33 @@
     "types": [
       "poison",
       "water"
+    ],
+    "moves": [
+      {
+        "name": "body-slam",
+        "accuracy": 100,
+        "power": 85
+      },
+      {
+        "name": "poison-sting",
+        "accuracy": 100,
+        "power": 15
+      },
+      {
+        "name": "pin-missile",
+        "accuracy": 95,
+        "power": 25
+      },
+      {
+        "name": "bite",
+        "accuracy": 100,
+        "power": 60
+      },
+      {
+        "name": "hydro-pump",
+        "accuracy": 80,
+        "power": 110
+      }
     ]
   },
   {
@@ -250,6 +871,33 @@
     "weight": 1100,
     "types": [
       "ground"
+    ],
+    "moves": [
+      {
+        "name": "stomp",
+        "accuracy": 100,
+        "power": 65
+      },
+      {
+        "name": "double-kick",
+        "accuracy": 100,
+        "power": 30
+      },
+      {
+        "name": "mega-kick",
+        "accuracy": 75,
+        "power": 120
+      },
+      {
+        "name": "body-slam",
+        "accuracy": 100,
+        "power": 85
+      },
+      {
+        "name": "take-down",
+        "accuracy": 85,
+        "power": 90
+      }
     ]
   },
   {
@@ -260,6 +908,33 @@
     "weight": 9200,
     "types": [
       "ground"
+    ],
+    "moves": [
+      {
+        "name": "stomp",
+        "accuracy": 100,
+        "power": 65
+      },
+      {
+        "name": "double-kick",
+        "accuracy": 100,
+        "power": 30
+      },
+      {
+        "name": "mega-kick",
+        "accuracy": 75,
+        "power": 120
+      },
+      {
+        "name": "body-slam",
+        "accuracy": 100,
+        "power": 85
+      },
+      {
+        "name": "take-down",
+        "accuracy": 85,
+        "power": 90
+      }
     ]
   }
 ]
