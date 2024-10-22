@@ -1,48 +1,54 @@
-import { request } from 'http'
-import { MongoClient } from 'mongodb'
-
-if (!process.env.MONGO_URI) {
-    throw new Error('Please add your Mongo URI to .env')
-}
-
-
-
-const uri = process.env.MONGO_URI
+import clientPromise from '$lib/mongodb.client';
 
 export async function load() {
-    try {
-        
+	let results;
+	try {
+		const client = await clientPromise;
+		if (!client) {
+			throw new Error('Failed to connect to the database');
+		}
+		const database = client.db('cs3380db');
+		const collection = database.collection('test');
+		results = await collection.find().toArray();
 
+		// Convert ObjectId to string
+		results = results.map((item) => {
+			return {
+				...item,
+				_id: item._id.toString()
+			};
+		});
+	} catch (error) {
+		console.error(error);
+	}
 
-    } catch (error) {
-        console.error(error)
-    }  
-
-
-  return {
-    status: 200,
-    body: {
-      message: 'Hello from the MongoDB server page'
-    }
-  }
+	return {
+		status: 200,
+		body: {
+			message: 'Hello from the MongoDB server page',
+			results
+		}
+	};
 }
 
 export const actions = {
-    addNameToDB: async ({ request }) => {
-        const formData = await request.formData()
-        const name = formData.get('userName')
+	addNameToDB: async ({ request }) => {
+		const formData = await request.formData();
+		const name = formData.get('userName');
 
-        const client = new MongoClient(uri)
-        await client.connect()
-        const database = client.db('cs3380db')
-        const collection = database.collection('test')
-        collection.insertOne({ userName: name })
+		const client = await clientPromise;
+		if (!client) {
+			throw new Error('Failed to connect to the database');
+		}
+		const database = client.db('cs3380db');
+		const collection = database.collection('test');
+		collection.insertOne({ userName: name });
 
-        return {
-            status: 200,
-            body: {
-                message: `${name} added to the database`
-            }
-        }
-    }
-}
+		return {
+			status: 200,
+			body: {
+				message: `${name} added to the database`
+			}
+		};
+	}
+};
