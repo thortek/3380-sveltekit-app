@@ -12,7 +12,7 @@ console.log(data)
 
 <form method="POST" action="?/addNameToDB">
     <input class="input" type="text" name="userName" placeholder="Enter your name" />
-    <select 
+
     <button class="btn variant-filled-primary" type="submit">Submit</button>
 </form>
 {#if form}
