@@ -12,7 +12,7 @@ export async function load() {
 		results = await collection.find().toArray();
 
 		// Convert ObjectId to string
-		results = results.map((item) => {
+		results = results.map((item: any) => {
 			return {
 				...item,
 				_id: item._id.toString()
