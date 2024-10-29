@@ -23,12 +23,22 @@
 	};
 
 	let hpCharacters: Character[] = [];
+    let mockarooData: any
 
 	const getHPCharacters = async () => {
 		const response = await fetch('/api/harryPotter');
 		const data = await response.json();
 		console.log(data);
 		hpCharacters = data;
+	};
+
+    const getMockarooData = async () => {
+		const response = await fetch('/api/mockaroo', {
+            method: 'POST',
+        });
+		const data = await response.json();
+		console.log(data);
+		mockarooData = data;
 	};
 </script>
 
@@ -39,8 +49,15 @@
 		class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
 		on:click={getHPCharacters}
 	>
-		Make API Call
+		Make Harry Potter API Call
 	</button>
+
+    <button
+    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+    on:click={getMockarooData}
+>
+    Make Mockaroo API Call
+</button>
 </div>
     
     {#if hpCharacters.length > 0}
