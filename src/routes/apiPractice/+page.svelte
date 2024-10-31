@@ -36,6 +36,7 @@
 		const response = await fetch('/api/mockaroo', {
             method: 'POST',
         });
+        console.log(response);
 		const data = await response.json();
 		console.log(data);
 		mockarooData = data;
@@ -67,6 +68,19 @@
                     <img class="rounded-lg" width="300" src={character.image !== "" ? character.image : '/favicon.png'} alt={character.name} />
                     <figcaption class="text-center">{character.name}</figcaption>
                 </figure>
+            {/each}
+        </div>
+    {/if}
+
+    {#if mockarooData}
+        <div class="container mx-auto w-full flex flex-wrap items-center">
+            {#each mockarooData as data}
+                <div class="mx-2">
+                    <img src={data.logo} alt={data.model}/>
+                    <p>{data.make}</p>
+                    <p>{data.model}</p>
+                    <p>{data.year}</p>
+                </div>
             {/each}
         </div>
     {/if}
