@@ -45,6 +45,7 @@
     "@floating-ui/dom": "1.6.10",
     "dotenv": "^16.4.5",
     "highlight.js": "11.10.0",
-    "mongodb": "^6.9.0"
+    "mongodb": "^6.9.0",
+    "openai": "^4.71.0"
   }
 }
