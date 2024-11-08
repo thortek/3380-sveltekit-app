@@ -7,12 +7,13 @@ const openai = new OpenAI({
 
 export const POST = async ({ request }) => {
     const body = await request.json()
-    console.log(body)
+    console.log(body.chats)
 
     const completion = await openai.chat.completions.create({
         model: 'llama3.2',
         messages: [
-            { role: 'user', content: body.message}
+          // { role: 'user', content: 'What is the purpose of life?' },
+            ...body.chats
         ]
     })
 

@@ -1,14 +1,24 @@
 <script lang="ts">
+  import { marked } from 'marked'
+  import { chatHistoryStore } from '$lib/stores/chatHistoryStore';
 
 let inputChat = ''
 let answerText = ''
 
 async function handleSubmit(this: HTMLFormElement, event: Event) {
-       // event.preventDefault();
+    event.preventDefault();
+    const formData: FormData = new FormData(this)
+  const message = formData.get('message') as string
+
+// we need to check if the message is empty
+  if (message === '') return
+
+  $chatHistoryStore = [...$chatHistoryStore, { role: 'user', content: message} ]
+
 		const response = await fetch('/api/chat', {
             method: 'POST',
             body: JSON.stringify({
-                message: inputChat,
+                chats: $chatHistoryStore,
             }),
             headers: {
                 'Content-Type': 'application/json',
@@ -16,7 +26,7 @@ async function handleSubmit(this: HTMLFormElement, event: Event) {
         });
         console.log(response)
         const data = await response.json()
-        answerText = data.message
+        answerText = await marked.parse(data.message)
 	};
 
 </script>
@@ -24,7 +34,9 @@ async function handleSubmit(this: HTMLFormElement, event: Event) {
 <h1>Chat happens here</h1>
 
 <form on:submit={handleSubmit}>
-    <input class="input m-2" type="text" placeholder="Type a message" bind:value={inputChat} />
-    <p>{answerText}</p>
+    <input class="input m-2" type="text" name="message" placeholder="Type a message" bind:value={inputChat} />
     <button class="btn variant-filled-primary m-2" type="submit">Send Chat</button>
 </form>
+<div>
+  {@html answerText}
+</div>
