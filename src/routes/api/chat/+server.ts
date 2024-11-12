@@ -5,21 +5,34 @@ const openai = new OpenAI({
     apiKey: 'ollama', // required but unused
 })
 
+export type MessageBody = { chats: { role: 'user' | 'assistant'; content: string }[] };
+
 export const POST = async ({ request }) => {
-    const body = await request.json()
+    const body: MessageBody = await request.json()
     console.log(body.chats)
 
-    const completion = await openai.chat.completions.create({
+    const stream = await openai.chat.completions.create({
         model: 'llama3.2',
         messages: [
-          // { role: 'user', content: 'What is the purpose of life?' },
+            { role: 'system', content: 'You are a helpful assistant.' },
+          { role: 'assistant', content: 'Hello! How can I help you today?' },
             ...body.chats
-        ]
+        ],
+        stream: true
     })
 
-    console.log(completion.choices[0].message.content)
+    // Create a new ReadableStream for the response
+		const readableStream = new ReadableStream({
+			async start(controller) {
+				for await (const chunk of stream) {
+					const text = chunk.choices[0]?.delta?.content || '';
+					controller.enqueue(text);
+				}
+				controller.close();
+			}
+		})
 
-    return new Response(JSON.stringify({ message: completion.choices[0].message.content }), {
+    return new Response(readableStream, {
         status: 200,
         headers: {
             'Content-Type': 'application/json'
