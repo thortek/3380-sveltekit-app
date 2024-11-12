@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { marked } from 'marked';
 	import { chatHistoryStore } from '$lib/stores/chatHistoryStore';
+	import { readableStreamStore } from '$lib/stores/readableStreamStore';
 
 	let inputChat = '';
 	let answerText = '';
