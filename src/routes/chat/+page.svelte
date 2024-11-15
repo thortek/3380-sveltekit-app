@@ -3,12 +3,19 @@
 	import { chatHistoryStore } from '$lib/stores/chatHistoryStore';
 	import { readableStreamStore } from '$lib/stores/readableStreamStore';
 	import { Avatar } from '@skeletonlabs/skeleton';
-	import { fly } from 'svelte/transition'
+	import { fly } from 'svelte/transition';
 
 	let inputChat = '';
 	let answerText = '';
 
 	const response = readableStreamStore();
+
+	let responseText = ''
+	$: if ($response.text !== '') {
+		(async () => {
+			responseText = await marked.parse($response.text);
+		})(); // an IIFE (Immediately Invoked Function Expression) to run the async function
+	}
 
 	async function handleSubmit(this: HTMLFormElement, event: Event) {
 		event.preventDefault();
@@ -48,12 +55,16 @@
 			];
 		}
 	}
+
+	function deleteAllChats() {
+		$chatHistoryStore = [];
+	}
 </script>
 
 <main class="w-screen h-full flex flex-col items-center">
-<form class="flex flex-col space-y-4 w-full max-w-7xl p-1" on:submit={handleSubmit}>
-	<div>
-		<!-- 		<input
+	<form class="flex flex-col w-full max-w-7xl p-1" on:submit={handleSubmit}>
+		<div class="space-y-4">
+			<!-- 		<input
 			class="input m-2"
 			type="text"
 			name="message"
@@ -61,34 +72,69 @@
 			bind:value={inputChat}
 		/>
 		<button class="btn variant-filled-primary m-2" type="submit">Send Chat</button> -->
-		{#await new Promise((res) => setTimeout(res, 1000)) then _}
-			<div class="flex space-x-2">
-				<Avatar class="" src={'/img-tutor-girl.png'} rounded="rounded-full" width="w-12" />
-				<div in:fly={{ y: 50, duration: 1000}} class="assistant-chat">
-					Hello! How can I help you?
+			{#await new Promise((res) => setTimeout(res, 1000)) then _}
+				<div class="flex space-x-2">
+					<Avatar class="" src={'/img-tutor-girl.png'} rounded="rounded-full" width="w-12" />
+					<div in:fly={{ y: 50, duration: 1000 }} class="assistant-chat">
+						Hello! How can I help you?
+					</div>
 				</div>
-			</div>
-		{/await}
-		<div class="space-y-4">
-			<hr />
-			<div class="flex space-x-4">
-				<textarea class="textarea" placeholder="Type your message..." name="message" rows="3" />
-				<div class="flex flex-col justify-between">
-					<button class="btn variant-filled-primary" type="submit">Send</button>
-					<button class="btn variant-outline-primary" type="reset">Clear Chats</button>
+			{/await}
+			<!-- Need to display each chat item here -->
+			{#each $chatHistoryStore as chat}
+				{#if chat.role === 'user'}
+					<div class="flex space-x-2">
+						<Avatar class="h-12 shrink-0" src={'/PikaThorAnime.png'} rounded="rounded-full" width="w-12" />
+						<div class="user-chat">
+							{chat.content}
+						</div>
+					</div>
+				<!-- this else handles the assistant role chat display -->
+<!-- 				{:else}
+				<div class="flex space-x-2">
+					<Avatar class="h-12 shrink-0" src={'/img-tutor-girl.png'} rounded="rounded-full" width="w-12" />
+					<div class="assistant-chat">
+						{@html chat.content}
+					</div>
+				</div> -->
+				{/if}
+			{/each}
+			{#if $response.loading}
+			{#await new Promise((res) => setTimeout(res, 1000)) then _}
+				<div class="flex">
+					<div class="flex space-x-2">
+						<Avatar class="h-12 shrink-0" src={'/img-tutor-girl.png'} rounded="rounded-full" width="w-12" />
+						<div class="assistant-chat">
+							{#if $response.text === ''}
+								Please wait, I am thinking...
+							{:else}
+								{@html responseText}
+							{/if}
+						</div>
+					</div>
+				</div>
+			{/await}
+			{/if}
+			<div class="space-y-4">
+				<hr />
+				<div class="flex space-x-4">
+					<textarea class="textarea" placeholder="Type your message..." name="message" rows="3" />
+					<div class="flex flex-col justify-between">
+						<button class="btn variant-filled-primary" type="submit">Send</button>
+						<button class="btn variant-outline-primary" type="reset" on:click={deleteAllChats}>Clear Chats</button>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</form>
+	</form>
 </main>
 
 <style lang="postcss">
 	.assistant-chat {
-		@apply bg-gray-200 text-gray-800 rounded-lg p-2
+		@apply bg-gray-200 text-gray-800 rounded-lg p-2;
 	}
 
 	.user-chat {
-		@apply bg-slate-800 text-white
+		@apply bg-slate-800 text-white;
 	}
 </style>
