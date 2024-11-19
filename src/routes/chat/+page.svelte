@@ -45,8 +45,9 @@
 			this.reset();
 
 			const answerText = (await answer) as string;
+			const parsedAnswer = await marked.parse(answerText)
 
-			$chatHistoryStore = [...$chatHistoryStore, { role: 'assistant', content: answerText }];
+			$chatHistoryStore = [...$chatHistoryStore, { role: 'assistant', content: parsedAnswer }];
 		} catch (error) {
 			console.error(error);
 			$chatHistoryStore = [
@@ -90,13 +91,13 @@
 						</div>
 					</div>
 				<!-- this else handles the assistant role chat display -->
-<!-- 				{:else}
+ 				{:else}
 				<div class="flex space-x-2">
 					<Avatar class="h-12 shrink-0" src={'/img-tutor-girl.png'} rounded="rounded-full" width="w-12" />
 					<div class="assistant-chat">
 						{@html chat.content}
 					</div>
-				</div> -->
+				</div>
 				{/if}
 			{/each}
 			{#if $response.loading}
