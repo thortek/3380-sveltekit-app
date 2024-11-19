@@ -4,6 +4,7 @@
 	import { readableStreamStore } from '$lib/stores/readableStreamStore';
 	import { Avatar } from '@skeletonlabs/skeleton';
 	import { fly } from 'svelte/transition';
+	import TypingIndicator from '$lib/utils/typingIndicator.svelte'
 
 	let inputChat = '';
 	let answerText = '';
@@ -64,6 +65,7 @@
 
 <main class="w-screen h-full flex flex-col items-center">
 	<form class="flex flex-col w-full max-w-7xl p-1" on:submit={handleSubmit}>
+		
 		<div class="space-y-4">
 			<!-- 		<input
 			class="input m-2"
@@ -84,7 +86,7 @@
 			<!-- Need to display each chat item here -->
 			{#each $chatHistoryStore as chat}
 				{#if chat.role === 'user'}
-					<div class="flex space-x-2">
+					<div class="flex justify-end space-x-2">
 						<Avatar class="h-12 shrink-0" src={'/PikaThorAnime.png'} rounded="rounded-full" width="w-12" />
 						<div class="user-chat">
 							{chat.content}
@@ -107,7 +109,7 @@
 						<Avatar class="h-12 shrink-0" src={'/img-tutor-girl.png'} rounded="rounded-full" width="w-12" />
 						<div class="assistant-chat">
 							{#if $response.text === ''}
-								Please wait, I am thinking...
+								<TypingIndicator/>
 							{:else}
 								{@html responseText}
 							{/if}
