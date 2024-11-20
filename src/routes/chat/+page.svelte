@@ -75,10 +75,10 @@
 			bind:value={inputChat}
 		/>
 		<button class="btn variant-filled-primary m-2" type="submit">Send Chat</button> -->
-			{#await new Promise((res) => setTimeout(res, 1000)) then _}
+			{#await new Promise((res) => setTimeout(res, 400)) then _}
 				<div class="flex space-x-2">
 					<Avatar class="" src={'/img-tutor-girl.png'} rounded="rounded-full" width="w-12" />
-					<div in:fly={{ y: 50, duration: 1000 }} class="assistant-chat">
+					<div in:fly={{ y: 50, duration: 400 }} class="assistant-chat">
 						Hello! How can I help you?
 					</div>
 				</div>
@@ -86,24 +86,30 @@
 			<!-- Need to display each chat item here -->
 			{#each $chatHistoryStore as chat}
 				{#if chat.role === 'user'}
-					<div class="flex justify-end space-x-2">
+					<div class="flex justify-end space-x-2 group/chat hover:bg-gray-400 hover:rounded-lg p-1 ml-auto">
 						<Avatar class="h-12 shrink-0" src={'/PikaThorAnime.png'} rounded="rounded-full" width="w-12" />
 						<div class="user-chat">
 							{chat.content}
 						</div>
+						<button type="button" class="group/delete invisible btn-icon max-h-6 w-6 hover:bg-gray-500 group-hover/chat:visible">
+							<img src="/x-circle-close-delete.svg" alt="Chat close box" />
+						</button>
 					</div>
 				<!-- this else handles the assistant role chat display -->
  				{:else}
-				<div class="flex space-x-2">
+				<div class="flex space-x-2 group/chat hover:bg-gray-400 hover:rounded-lg p-1 mr-auto">
 					<Avatar class="h-12 shrink-0" src={'/img-tutor-girl.png'} rounded="rounded-full" width="w-12" />
 					<div class="assistant-chat">
 						{@html chat.content}
 					</div>
+					<button type="button" class="group/delete invisible btn-icon max-h-6 w-6 hover:bg-gray-500 group-hover/chat:visible">
+						<img src="/x-circle-close-delete.svg" alt="Chat close box" />
+					</button>
 				</div>
 				{/if}
 			{/each}
 			{#if $response.loading}
-			{#await new Promise((res) => setTimeout(res, 1000)) then _}
+			{#await new Promise((res) => setTimeout(res, 400)) then _}
 				<div class="flex">
 					<div class="flex space-x-2">
 						<Avatar class="h-12 shrink-0" src={'/img-tutor-girl.png'} rounded="rounded-full" width="w-12" />
