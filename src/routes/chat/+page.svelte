@@ -61,6 +61,13 @@
 	function deleteAllChats() {
 		$chatHistoryStore = [];
 	}
+
+  function deleteChat(chat: { role: 'user' | 'assistant'; content: string}) {
+    console.log('delete chat');
+    return () => {
+      $chatHistoryStore = $chatHistoryStore.filter((chatItem) => chatItem !== chat)
+    }
+  }
 </script>
 
 <main class="w-screen h-full flex flex-col items-center">
@@ -91,7 +98,7 @@
 						<div class="user-chat">
 							{chat.content}
 						</div>
-						<button type="button" class="group/delete invisible btn-icon max-h-6 w-6 hover:bg-gray-500 group-hover/chat:visible">
+						<button type="button" class="group/delete invisible btn-icon max-h-6 w-6 hover:bg-gray-500 group-hover/chat:visible" on:click={deleteChat(chat)}>
 							<img src="/x-circle-close-delete.svg" alt="Chat close box" />
 						</button>
 					</div>
@@ -102,7 +109,7 @@
 					<div class="assistant-chat">
 						{@html chat.content}
 					</div>
-					<button type="button" class="group/delete invisible btn-icon max-h-6 w-6 hover:bg-gray-500 group-hover/chat:visible">
+					<button type="button" class="group/delete invisible btn-icon max-h-6 w-6 hover:bg-gray-500 group-hover/chat:visible" on:click={deleteChat(chat)}>
 						<img src="/x-circle-close-delete.svg" alt="Chat close box" />
 					</button>
 				</div>

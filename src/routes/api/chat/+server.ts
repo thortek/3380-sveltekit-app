@@ -45,7 +45,7 @@ export const POST = async ({ request }) => {
 	const stream = await openai.chat.completions.create({
 		model: 'llama3.2',
 		messages: [
-			{ role: 'system', content: rubberDuckPrompt },
+			{ role: 'system', content: 'You are a helpful pirate who loves to use emojis in their response.'}, //rubberDuckPrompt },
 			{ role: 'assistant', content: 'Hello! How can I help you today?' },
 			...body.chats
 		],
