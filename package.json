@@ -43,9 +43,11 @@
   "type": "module",
   "dependencies": {
     "@floating-ui/dom": "1.6.10",
+    "dompurify": "^3.2.2",
     "dotenv": "^16.4.5",
-    "highlight.js": "11.10.0",
+    "highlight.js": "^11.10.0",
     "marked": "^14.1.4",
+    "marked-highlight": "^2.2.1",
     "mongodb": "^6.9.0",
     "openai": "^4.71.0"
   }

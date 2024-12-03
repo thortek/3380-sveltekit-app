@@ -30,6 +30,7 @@
 <CodeBlock
 	class="m-4"
 	language="ts"
+  buttonLabel="Copy"
 	code={`function filteredArray(arr: any, elem: any) {
   let newArr: any = [];
   // Only change code below this line

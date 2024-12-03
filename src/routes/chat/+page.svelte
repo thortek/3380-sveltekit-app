@@ -1,10 +1,32 @@
 <script lang="ts">
-	import { marked } from 'marked';
+	import { Marked } from 'marked';
 	import { chatHistoryStore } from '$lib/stores/chatHistoryStore';
 	import { readableStreamStore } from '$lib/stores/readableStreamStore';
 	import { Avatar } from '@skeletonlabs/skeleton';
 	import { fly } from 'svelte/transition';
 	import TypingIndicator from '$lib/utils/typingIndicator.svelte'
+	// importing optional packages for syntax highlighting
+	import { markedHighlight } from 'marked-highlight';
+	import hljs from 'highlight.js';
+	import javascript from 'highlight.js/lib/languages/javascript';
+	import typescript from 'highlight.js/lib/languages/typescript';
+	import css from 'highlight.js/lib/languages/css';
+	import DOMPurify from 'dompurify';
+
+	// register the languages I want to highlight
+	hljs.registerLanguage('javascript', javascript);
+	hljs.registerLanguage('typescript', typescript);
+	hljs.registerLanguage('css', css);
+
+	const marked = new Marked(
+		markedHighlight({
+			langPrefix: 'hljs language-',
+			highlight: (code, lang) => {
+				const language = hljs.getLanguage(lang) ? lang : 'plaintext';
+				return hljs.highlight(code, { language }).value;
+			}
+		})
+	)
 
 	let inputChat = '';
 	let answerText = '';
@@ -12,9 +34,11 @@
 	const response = readableStreamStore();
 
 	let responseText = ''
+
 	$: if ($response.text !== '') {
 		(async () => {
-			responseText = await marked.parse($response.text);
+			const parsedText = await marked.parse($response.text);
+			responseText = DOMPurify.sanitize(parsedText).replace(/<script>/g, '&lt;script&gt;').replace(/<\/script>/g, '&lt;/script&gt;');
 		})(); // an IIFE (Immediately Invoked Function Expression) to run the async function
 	}
 
@@ -47,8 +71,9 @@
 
 			const answerText = (await answer) as string;
 			const parsedAnswer = await marked.parse(answerText)
+			const purifiedText = DOMPurify.sanitize(parsedAnswer).replace(/<script>/g, '&lt;script&gt;').replace(/<\/script>/g, '&lt;/script&gt;');
 
-			$chatHistoryStore = [...$chatHistoryStore, { role: 'assistant', content: parsedAnswer }];
+			$chatHistoryStore = [...$chatHistoryStore, { role: 'assistant', content: purifiedText }];
 		} catch (error) {
 			console.error(error);
 			$chatHistoryStore = [
